@@ -14,6 +14,7 @@
     value={value}
     min={field.min}
     max={field.max}
+    required={!field.notRequired}
     on:change={e => {
       value = e.currentTarget.value
       onChange(field.property, value)

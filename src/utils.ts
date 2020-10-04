@@ -26,10 +26,10 @@ export const getInitialData = (fields: Field[]): Data =>
             ? field.value
             : isSelectOptions(field.options)
               ? field.options[0].value
-              : field.options[0] 
+              : field.options[0]
         }
       }
-      if (isRange(field)) {
+      if (isRange(field) && !field.notRequired) {
         return {
           ...result,
           [field.property]: field.value || field.min,

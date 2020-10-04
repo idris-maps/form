@@ -10,6 +10,7 @@ export interface Color {
   property: string
   label?: string
   value?: string
+  notRequired?: boolean
 }
 
 export interface Date {
@@ -19,6 +20,7 @@ export interface Date {
   min?: string
   max?: string
   value?: string
+  notRequired?: boolean
 }
 
 export interface Email {
@@ -29,6 +31,7 @@ export interface Email {
   maxLength?: number
   minLength?: number
   value?: string
+  notRequired?: boolean
 }
 
 export interface Number {
@@ -39,6 +42,7 @@ export interface Number {
   max?: number
   step?: number
   value?: number
+  notRequired?: boolean
 }
 
 export interface Password {
@@ -49,6 +53,7 @@ export interface Password {
   minLength?: number
   pattern?: string
   value?: string
+  notRequired?: boolean
 }
 
 export interface Radio {
@@ -67,6 +72,7 @@ export interface Range {
   max: number
   step: number
   value?: number
+  notRequired?: boolean
 }
 
 export interface Tel {
@@ -77,6 +83,7 @@ export interface Tel {
   minLength?: number
   pattern?: string
   value?: string
+  notRequired?: boolean
 }
 
 export interface Text {
@@ -87,6 +94,7 @@ export interface Text {
   minLength?: number
   pattern?: string
   value?: string
+  notRequired?: boolean
 }
 
 export interface Textarea {
@@ -94,6 +102,7 @@ export interface Textarea {
   property: string
   label?: string
   value?: string
+  notRequired?: boolean
 }
 
 export interface SelectOption {

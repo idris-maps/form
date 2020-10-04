@@ -15,6 +15,7 @@
     minlength={field.minLength}
     maxLength={field.maxLength}
     pattern={field.pattern}
+    required={!field.notRequired}
     on:keyup={e => {
       value = e.currentTarget.value
       onChange(field.property, value)

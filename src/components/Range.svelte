@@ -15,6 +15,7 @@
     min={field.min}
     max={field.max}
     step={field.step}
+    required={!field.notRequired}
     on:input={e => {
       const v = Number(e.currentTarget.value)
       if (!Number.isNaN(v)) {

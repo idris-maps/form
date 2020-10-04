@@ -12,6 +12,7 @@
     id={field.property}
     name={field.property}
     value={value}
+    required={!field.notRequired}
     on:change={e => {
       value = e.currentTarget.value
       onChange(field.property, value)
