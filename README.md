@@ -22,7 +22,7 @@ form(document.getElementById('login-form'), {
     method: 'POST',
     url: 'https://my.api/login',
     errorMessage: 'You are not welcome here',
-    successRedirect: '/home',
+    successRedirectUrl: '/home',
   },
 })
 
@@ -31,7 +31,7 @@ form(document.getElementById('login-form'), {
 </html>
 ```
 
-Download [form.js here](https://raw.githubusercontent.com/idris-maps/form/master/build/form.min.js).
+Download [form.js here](https://raw.githubusercontent.com/idris-maps/form/master/dist/form.min.js).
 
 ### with a bundler
 
@@ -42,7 +42,7 @@ npm install @idris-maps/form
 Types are included.
 
 ```ts
-import form { Field, SubmitAction } from 'form'
+import form, { Field, SubmitAction } from '@idris-maps/form'
 
 const fields: Field[] = [
   { type: 'email', property: 'email' },
@@ -53,7 +53,7 @@ const submit: SubmitAction = {
   method: 'POST',
   url: 'https://my.api/login',
   errorMessage: 'You are not welcome here',
-  successRedirect: '/home',
+  successRedirectUrl: '/home',
 }
 
 form(document.getElementById('login-form'), {
