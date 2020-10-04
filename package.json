@@ -1,6 +1,6 @@
 {
   "name": "@idris-maps/form",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "author": "idris-maps",
   "license": "GPLv2",
   "main": "dist/index.js",
