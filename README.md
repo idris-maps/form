@@ -31,7 +31,7 @@ form(document.getElementById('login-form'), {
 </html>
 ```
 
-Download [form.js here]().
+Download [form.js here](https://raw.githubusercontent.com/idris-maps/form/master/build/form.min.js).
 
 ### with a bundler
 
@@ -62,4 +62,4 @@ form(document.getElementById('login-form'), {
 })
 ```
 
-See the [type definitions]() for more details.
+See the [type definitions](https://github.com/idris-maps/form/blob/master/build/index.d.ts) for more details.
