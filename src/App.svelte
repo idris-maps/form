@@ -3,29 +3,28 @@
 	import type { SubmitAction} from './submitTypes'
 	import { getInitialData, request } from './utils'
 	import RenderField from './components/Field.svelte'
-	export let submitAction: SubmitAction
+	export let submit: SubmitAction
 	export let fields: Field[] = []
 
 	let message: string
 	let data = getInitialData(fields)
 	const setData = (key: string, value: any) => {
 		data = { ...data, [key]: value }
-		console.log(data)
 	}
 
 	const onSubmit: svelte.JSX.EventHandler<Event, HTMLFormElement> = e => {
 		e.preventDefault()
-		if (e.currentTarget.checkValidity() && submitAction) {
-			const { loadingMessage } = submitAction
+		if (e.currentTarget.checkValidity() && submit) {
+			const { loadingMessage } = submit
 			if (loadingMessage) { message = loadingMessage }
-			request(data, submitAction)
+			request(data, submit)
 				.then(() => {
-					const { successMessage, successRedirectUrl } = submitAction
+					const { successMessage, successRedirectUrl } = submit
 					if (successMessage) { message = successMessage }
 					if (successRedirectUrl) { window.location.assign(successRedirectUrl) }
 				})
 				.catch(err => {
-					const { errorMessage, errorRedirectUrl } = submitAction
+					const { errorMessage, errorRedirectUrl } = submit
 					console.log(err, errorMessage)
 					if (errorMessage) { message = errorMessage }
 					if (errorRedirectUrl) { window.location.assign(errorRedirectUrl) }
@@ -39,7 +38,7 @@
 		<RenderField field={field} onChange={setData} />
 	{/each}
 	<div class="field submit-field">
-		<input type="submit" label={submitAction?.buttonLabel}/>
+		<input type="submit" label={submit?.buttonLabel}/>
 	</div>
 	{#if message}
 		<p class="submit-message">{ message }</p>
