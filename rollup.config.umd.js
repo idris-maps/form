@@ -9,7 +9,7 @@ export default {
 	output: {
 		sourcemap: false,
 		format: 'umd',
-		name: 'formalise',
+		name: 'form',
     file: 'build/index.js',
     exports: 'default',
 	},

@@ -1,7 +1,7 @@
 (function (global, factory) {
     typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory() :
     typeof define === 'function' && define.amd ? define(factory) :
-    (global = typeof globalThis !== 'undefined' ? globalThis : global || self, global.formalise = factory());
+    (global = typeof globalThis !== 'undefined' ? globalThis : global || self, global.form = factory());
 }(this, (function () { 'use strict';
 
     function noop() { }
@@ -2685,8 +2685,8 @@
     	}
     }
 
-    const formalise = (target, props) => new App({ target, props });
+    const form = (target, props) => new App({ target, props });
 
-    return formalise;
+    return form;
 
 })));

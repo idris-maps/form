@@ -10,8 +10,8 @@ export default {
 	output: {
 		sourcemap: false,
 		format: 'iife',
-		name: 'formalise',
-		file: 'build/formalise.min.js'
+		name: 'form',
+		file: 'build/form.min.js'
 	},
 	plugins: [
 		svelte({

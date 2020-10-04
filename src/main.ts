@@ -7,7 +7,7 @@ interface Props {
 	submit: SubmitAction
 }
 
-const formalise = (target: Element, props: Props) =>
+const form = (target: Element, props: Props) =>
 	new App({ target, props })
 
-export default formalise
+export default form

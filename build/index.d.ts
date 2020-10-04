@@ -143,10 +143,10 @@ export interface SubmitAction {
   successRedirectUrl?: string
 }
 
-interface FormaliseProps {
+interface Props {
   fields: Field[]
   submit: SubmitAction
 }
 
-declare const formalise: (target: Element, props: FormaliseProps) => void;
-export default formalise;
+declare const form: (target: Element, props: Props) => void;
+export default form;

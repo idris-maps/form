@@ -1,5 +1,5 @@
 {
-  "name": "formalise",
+  "name": "@idris-maps/form",
   "version": "0.0.1",
   "author": "idris-maps",
   "license": "GPLv2",
@@ -11,7 +11,7 @@
   "files": [
     "dist"
   ],
-  "description": "Simple form builder",
+  "description": "Define forms in JSON",
   "keywords": ["form"],
   "scripts": {
     "build": "npm run build:iife && npm run build:umd",
@@ -19,7 +19,8 @@
     "build:umd": "rollup --config rollup.config.umd.js",
     "dev": "rollup -c -w",
     "start": "sirv public",
-    "validate": "svelte-check"
+    "validate": "svelte-check",
+    "prepublish": "npm run build"
   },
   "devDependencies": {
     "@rollup/plugin-commonjs": "^14.0.0",
