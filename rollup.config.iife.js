@@ -11,7 +11,7 @@ export default {
 		sourcemap: false,
 		format: 'iife',
 		name: 'form',
-		file: 'build/form.min.js'
+		file: 'dist/form.min.js'
 	},
 	plugins: [
 		svelte({

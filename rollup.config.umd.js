@@ -10,7 +10,7 @@ export default {
 		sourcemap: false,
 		format: 'umd',
 		name: 'form',
-    file: 'build/index.js',
+    file: 'dist/index.js',
     exports: 'default',
 	},
 	plugins: [
