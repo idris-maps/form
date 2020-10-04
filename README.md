@@ -62,4 +62,4 @@ form(document.getElementById('login-form'), {
 })
 ```
 
-See the [type definitions](https://github.com/idris-maps/form/blob/master/build/index.d.ts) for more details.
+See the [type definitions](https://github.com/idris-maps/form/blob/master/dist/index.d.ts) for more details.
