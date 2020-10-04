@@ -5,6 +5,7 @@ import {
   isSelectOptions,
   isRange,
 } from './fieldTypes'
+import type { SubmitAction } from './submitTypes'
 
 interface Data {
   [key: string]: any
@@ -45,3 +46,24 @@ export const getInitialData = (fields: Field[]): Data =>
     },
     {},
   )
+
+export const request = async (data: Data, submitAction: SubmitAction) => {
+  const { method, data : where, url, headers } = submitAction
+  const query = where === 'query'
+    ? `?${new URLSearchParams(data).toString()}`
+    : ''
+  const res = await fetch(`${url}${query}`, {
+    method,
+    headers: {
+      'Content-Type': 'application/json',
+      ...(headers || {}),
+    },
+    body: where === 'query'
+      ? undefined
+      : JSON.stringify(data)
+  })
+  if (res.status >= 400) {
+    throw new Error(`status: ${res.status}`)
+  }
+  return await res.json()
+}

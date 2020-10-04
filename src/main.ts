@@ -1,5 +1,6 @@
 import App from './App.svelte'
 import type { Field } from './fieldTypes'
+import type { SubmitAction } from './submitTypes'
 
 const fields: Field[] = [
 	{
@@ -20,6 +21,7 @@ const fields: Field[] = [
 		label: 'Try date',
 		value: '2020-01-01'
 	},
+	/*
 	{
 		type: 'email',
 		property: 'try-email',
@@ -69,6 +71,7 @@ const fields: Field[] = [
 		property: 'try-textarea',
 		label: 'Try textarea'
 	},
+	*/
 	{
 		type: 'select',
 		property: 'try-select',
@@ -78,10 +81,21 @@ const fields: Field[] = [
 	},
 ]
 
+const submitAction: SubmitAction = {
+	method: 'GET',
+	url: 'http://localhost',
+	data: 'query',
+	loadingMessage: 'Processing request',
+	errorMessage: 'Ooops',
+	successMessage: 'Yoohoo',
+	// errorRedirectUrl: 'https://idris-maps.com'
+}
+
 const app = new App({
 	target: document.body,
 	props: {
-		fields: fields
+		fields,
+		submitAction,
 	}
 })
 
