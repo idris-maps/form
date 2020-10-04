@@ -37,5 +37,8 @@
     "typescript": "^3.9.3",
     "tslib": "^2.0.0",
     "@tsconfig/svelte": "^1.0.0"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
