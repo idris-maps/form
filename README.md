@@ -2,6 +2,8 @@
 
 Define forms in JSON. This library makes no assumptions about esthetics, use your own CSS.
 
+[Demo](https://observablehq.com/@idris-maps/idris-maps-form-example)
+
 ## Usage
 
 ### without a bundler
